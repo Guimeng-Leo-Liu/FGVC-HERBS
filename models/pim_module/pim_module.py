@@ -561,6 +561,6 @@ class PluginMoodel(nn.Module):
         else:
             hs = hs.mean(1)
         out = self.classifier(hs)
-        logits['ori_out'] = logits
+        logits['ori_out'] = out
 
-        return 
+        return logits
