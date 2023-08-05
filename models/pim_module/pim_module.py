@@ -548,7 +548,7 @@ class PluginMoodel(nn.Module):
             logits['comb_outs'] = comb_outs
             return logits
         
-        if self.use_selection or self.fpn:
+        if self.use_selection or self.use_fpn:
             return logits
 
         ### original backbone (only predict final selected layer)
