@@ -174,6 +174,7 @@ def _average_top_k_result(corrects: dict, total_samples: dict, scores: list, lab
     for b in range(batch_size):
         tmp_logit = None
         ids = torch.sort(max_scores[b], dim=-1)[1] # S
+        print(ids)
         for i in range(tops[-1]):
             top_i_id = ids[i]
             if tmp_logit is None:
