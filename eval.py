@@ -251,7 +251,7 @@ def evaluate(args, model, test_loader):
 
             if "ori_out" in outs:
                 this_name = "original"
-                _cal_evalute_metric(corrects, total_samples, outs["ori_out"], labels, this_name)
+                _cal_evalute_metric(corrects, total_samples, outs["ori_out"], labels, this_name, scores, score_names)
         
             _average_top_k_result(corrects, total_samples, scores, labels)
 
